@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzikly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+                <div class="logo">
+                    <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M10.421 11.375c-.294 1.028.012 2.064.784 2.653 1.061.81 2.565.3 2.874-.995.08-.337.103-.722.027-1.056-.23-1.001-.52-1.988-.792-2.996-1.33.154-2.543 1.172-2.893 2.394zm5.548-.287c.273 1.012.285 2.017-.127 3-1.128 2.69-4.721 3.14-6.573.826-1.302-1.627-1.28-3.961.06-5.734.78-1.032 1.804-1.707 3.048-2.054l.379-.104c-.084-.415-.188-.816-.243-1.224-.176-1.317.512-2.503 1.744-3.04 1.226-.535 2.708-.216 3.53.76.406.479.395 1.08-.025 1.464-.412.377-.996.346-1.435-.09-.247-.246-.51-.44-.877-.436-.525.006-.987.418-.945.937.037.468.173.93.3 1.386.022.078.216.135.338.153 1.334.197 2.504.731 3.472 1.676 2.558 2.493 2.861 6.531.672 9.44-1.529 2.032-3.61 3.168-6.127 3.409-4.621.44-8.664-2.53-9.7-7.058C2.515 10.255 4.84 5.831 8.795 4.25c.586-.234 1.143-.031 1.371.498.232.537-.019 1.086-.61 1.35-2.368 1.06-3.817 2.855-4.215 5.424-.533 3.433 1.656 6.776 5 7.72 2.723.77 5.658-.166 7.308-2.33 1.586-2.08 1.4-5.099-.427-6.873a3.979 3.979 0 0 0-1.823-1.013c.198.716.389 1.388.57 2.062z"></path> </g> </g></svg> Muzikly
+                </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="nav-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        <span>Home</span>
+                    </li>
+                    <li class="nav-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                        <span>Search</span>
+                    </li>
+                    <li class="nav-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 2v12H8V4h12z"/>
+                        </svg>
+                        <span>My library</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="nav-menu-secondary">
+                <ul>
+                </ul>
+            </nav>
+
+            <nav class="nav-menu-secondary">
+                <ul>
+                    <li class="nav-item separator">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                        <span>New playlist</span>
+                    </li>
+                    <li class="nav-item">
+                        <span>Recherche</span>
+                        <svg class="icon" viewBox="0 0 24 24" width="200" height="280" aria-hidden="true" role="img">
+  <!-- Barre verticale -->
+  <rect x="45" y="10" width="10" height="100" rx="3" fill="#FAFAFA"/>
+  <!-- Barre horizontale -->
+  <rect x="20" y="40" width="60" height="10" rx="3" fill="#FAFAFA"/>
+</svg>
+                        
+            <div class="copyright">
+                © 2025 Muzikly
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </button>
+                <div class="top-right">
+                    <svg class="notification-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                    </svg>
+                </div>
+            </header>
+
+            <!-- Profile Section -->
+            <section class="profile-section">
+                <div class="profile-info">
+                    <div class="profile-picture">
+                        <img src="https://t4.ftcdn.net/jpg/12/49/12/63/360_F_1249126338_leS5yTD2NdGuTra86mGyq9heEAxLbX5O.jpg" alt="Artiste">
+                    </div>
+                    <div class="profile-details">
+                        <h2 class="profile-name">Synaï</h2>
+                        <button class="edit-profile-btn">Ecouter sons</button>
+                        <p class="profile-stats">556 Titres • 129 Albums</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <!-- Playlists Section -->
+            <section class="playlists-section">
+                <div class="playlists-header">
+                    <h3>Playlists</h3>
+                    <div class="filter-tabs">
+                        <span class="tab">Titres</span>
+                        <span class="tab">Albums</span>
+                    </div>
+                </div>
+
+                <div class="playlists-list">
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Art Techno">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>YHWH</h4>
+                            <p>120 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Work Out">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Freestyle Pour Dieu</h4>
+                            <p>600 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABVlJREFUeAHtnNdu60gQREfOOcABsN/8/59lwA8OcM7p4hCXCy5h0WytKHJqqwFCpjwz7K6amkyNTk5OvpNNFoE52cgcWIGACRavCCbYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KFid4QTW+hYWFtLa2lpaXl9P8/Hzink/s8/MzfXx8FJ+vr6/p6empuFfEYqT0Q2hzc3Npa2srra+vp6WlpRBfb29v6fHxMd3d3aWvr69Q3iEnllDwaDRK29vbxQXJkxgVgotybm9vi+v7O/8fAcyeYJrhvb29ogmehNh6HirI7u5u2tzcTFdXV0XzXU+T0/1k1X0gEe7s7KTDw8OpkVsNiz6bsnlGzpalgmmS9/f308bGRqfY8xzUvLi4mC4vL1OOTXaWCj44OOic3GrNoSJRoXK07AimyWSUPGuD5Byb66wIZkDVJ8g8Gx9ysmwIpj9ktMxnXzYEH6KxZ0Mw81NGtn0bPuBLLtY/Yi2QYm46KajPz8/FCtXLy8s/y5GQtLKyUvTlq6urLTz4dxJ8yWXFKwuCWX6MrlC9v78XUxuIrRv/47q/vy+IZoTMVKit4Qs+3dzctM3SW7osmujoqBnVnp2dpZ/IrSNNGtKSJ2JRnyJlTzPt4AmmOY1sHKDM8/Pz0IYBmwvkIW9bw6chjAl+83fwBEenJaw4TbIbRB7yRizqW6TsaaUdPMHs57Y1mtk2zfK48sgbaaojvo17ZtffD57gcpO+DRAPDw9tkjWmiZQR8a3xoR3+c/Cj6Eg/x+mMccZ0qFxPpikep9SmMuplR3yr553VvZSCOYYzziAXQrhKon9K21RGPX0OCh48wXVQfR9DYPAEc0CurTU1mTTLqJOrabTcVEbdj4hv9byzuh98HwwhbVeZGNWOm8vS556env6KK0uYbS3SnLctc9rppBQ8jRMekRWqHBQ8eIIjo1pGyhEF1tVC3sjmQ8S3+rNmdT94gjmUHjFGyNGNCconT9Po+icfor79VEbX3w2eYPo5DqW3NfprTkNGSCYtedr29fiCT+6D27LySzreOIgYzezx8XGr5ppmmbSRphlfoj5F/J9m2sGPogmWzXU22SOqRI1HR0fFihXLj/SXpeKYCjHiZlAWJRZ/2JjApxwsC4IBlNdJOKMcNQichMSm5+DLJDtWTWV29b/B98Fl4IBaKrD8ro9PfMCXXCwbgnmrgHeF+ny7YAg+RCtWNgQTGNOSPs9B8ewcpkbVSpAVwTgOyH2MYBmo9Vm5qqRF/s6OYIK7uLiYKclUqKYNigjgs06bJcH0hRySu76+7rRP5jk8g2f12ff/l0qRxTRpXIA0mawoTfMF8PJZjJYVXgDPmmDIYNDDViALIdHFkJLM6mc552YqlKtqq/FkTzDBQARqZnXJP8JSpTclqV/ZqYbGciTnllmS5OwU9+UZqv/TzyhJKLhKbPk3fWgu68Wlz118ZjmK7gII1TJNsCqzf+MywSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrA4wX8AfRTBIQvxo90AAAAASUVORK5CYII=" alt="Quiet Hours">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Zinzin</h4>
+                            <p>101 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Deep Focus">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Choisir Papa</h4>
+                            <p>93 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABVlJREFUeAHtnNdu60gQREfOOcABsN/8/59lwA8OcM7p4hCXCy5h0WytKHJqqwFCpjwz7K6amkyNTk5OvpNNFoE52cgcWIGACRavCCbYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KFid4QTW+hYWFtLa2lpaXl9P8/Hzink/s8/MzfXx8FJ+vr6/p6empuFfEYqT0Q2hzc3Npa2srra+vp6WlpRBfb29v6fHxMd3d3aWvr69Q3iEnllDwaDRK29vbxQXJkxgVgotybm9vi+v7O/8fAcyeYJrhvb29ogmehNh6HirI7u5u2tzcTFdXV0XzXU+T0/1k1X0gEe7s7KTDw8OpkVsNiz6bsnlGzpalgmmS9/f308bGRqfY8xzUvLi4mC4vL1OOTXaWCj44OOic3GrNoSJRoXK07AimyWSUPGuD5Byb66wIZkDVJ8g8Gx9ysmwIpj9ktMxnXzYEH6KxZ0Mw81NGtn0bPuBLLtY/Yi2QYm46KajPz8/FCtXLy8s/y5GQtLKyUvTlq6urLTz4dxJ8yWXFKwuCWX6MrlC9v78XUxuIrRv/47q/vy+IZoTMVKit4Qs+3dzctM3SW7osmujoqBnVnp2dpZ/IrSNNGtKSJ2JRnyJlTzPt4AmmOY1sHKDM8/Pz0IYBmwvkIW9bw6chjAl+83fwBEenJaw4TbIbRB7yRizqW6TsaaUdPMHs57Y1mtk2zfK48sgbaaojvo17ZtffD57gcpO+DRAPDw9tkjWmiZQR8a3xoR3+c/Cj6Eg/x+mMccZ0qFxPpikep9SmMuplR3yr553VvZSCOYYzziAXQrhKon9K21RGPX0OCh48wXVQfR9DYPAEc0CurTU1mTTLqJOrabTcVEbdj4hv9byzuh98HwwhbVeZGNWOm8vS556env6KK0uYbS3SnLctc9rppBQ8jRMekRWqHBQ8eIIjo1pGyhEF1tVC3sjmQ8S3+rNmdT94gjmUHjFGyNGNCconT9Po+icfor79VEbX3w2eYPo5DqW3NfprTkNGSCYtedr29fiCT+6D27LySzreOIgYzezx8XGr5ppmmbSRphlfoj5F/J9m2sGPogmWzXU22SOqRI1HR0fFihXLj/SXpeKYCjHiZlAWJRZ/2JjApxwsC4IBlNdJOKMcNQichMSm5+DLJDtWTWV29b/B98Fl4IBaKrD8ro9PfMCXXCwbgnmrgHeF+ny7YAg+RCtWNgQTGNOSPs9B8ewcpkbVSpAVwTgOyH2MYBmo9Vm5qqRF/s6OYIK7uLiYKclUqKYNigjgs06bJcH0hRySu76+7rRP5jk8g2f12ff/l0qRxTRpXIA0mawoTfMF8PJZjJYVXgDPmmDIYNDDViALIdHFkJLM6mc552YqlKtqq/FkTzDBQARqZnXJP8JSpTclqV/ZqYbGciTnllmS5OwU9+UZqv/TzyhJKLhKbPk3fWgu68Wlz118ZjmK7gII1TJNsCqzf+MywSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrA4wX8AfRTBIQvxo90AAAAASUVORK5CYII=" alt="Chill Vibes">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Le Temps</h4>
+                            <p>12 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Lofi Music">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Une Question...</h4>
+                            <p>24 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Movie Playlist">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Papa Yahweh ft. Eilynn</h4>
+                            <p>24 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Movie Playlist">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Saisir les Bases</h4>
+                            <p>24 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+
+                    <div class="playlist-item">
+                        <div class="playlist-cover">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABVlJREFUeAHtnNdu60gQREfOOcABsN/8/59lwA8OcM7p4hCXCy5h0WytKHJqqwFCpjwz7K6amkyNTk5OvpNNFoE52cgcWIGACRavCCbYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KFid4QTW+hYWFtLa2lpaXl9P8/Hzink/s8/MzfXx8FJ+vr6/p6empuFfEYqT0Q2hzc3Npa2srra+vp6WlpRBfb29v6fHxMd3d3aWvr69Q3iEnllDwaDRK29vbxQXJkxgVgotybm9vi+v7O/8fAcyeYJrhvb29ogmehNh6HirI7u5u2tzcTFdXV0XzXU+T0/1k1X0gEe7s7KTDw8OpkVsNiz6bsnlGzpalgmmS9/f308bGRqfY8xzUvLi4mC4vL1OOTXaWCj44OOic3GrNoSJRoXK07AimyWSUPGuD5Byb66wIZkDVJ8g8Gx9ysmwIpj9ktMxnXzYEH6KxZ0Mw81NGtn0bPuBLLtY/Yi2QYm46KajPz8/FCtXLy8s/y5GQtLKyUvTlq6urLTz4dxJ8yWXFKwuCWX6MrlC9v78XUxuIrRv/47q/vy+IZoTMVKit4Qs+3dzctM3SW7osmujoqBnVnp2dpZ/IrSNNGtKSJ2JRnyJlTzPt4AmmOY1sHKDM8/Pz0IYBmwvkIW9bw6chjAl+83fwBEenJaw4TbIbRB7yRizqW6TsaaUdPMHs57Y1mtk2zfK48sgbaaojvo17ZtffD57gcpO+DRAPDw9tkjWmiZQR8a3xoR3+c/Cj6Eg/x+mMccZ0qFxPpikep9SmMuplR3yr553VvZSCOYYzziAXQrhKon9K21RGPX0OCh48wXVQfR9DYPAEc0CurTU1mTTLqJOrabTcVEbdj4hv9byzuh98HwwhbVeZGNWOm8vS556env6KK0uYbS3SnLctc9rppBQ8jRMekRWqHBQ8eIIjo1pGyhEF1tVC3sjmQ8S3+rNmdT94gjmUHjFGyNGNCconT9Po+icfor79VEbX3w2eYPo5DqW3NfprTkNGSCYtedr29fiCT+6D27LySzreOIgYzezx8XGr5ppmmbSRphlfoj5F/J9m2sGPogmWzXU22SOqRI1HR0fFihXLj/SXpeKYCjHiZlAWJRZ/2JjApxwsC4IBlNdJOKMcNQichMSm5+DLJDtWTWV29b/B98Fl4IBaKrD8ro9PfMCXXCwbgnmrgHeF+ny7YAg+RCtWNgQTGNOSPs9B8ewcpkbVSpAVwTgOyH2MYBmo9Vm5qqRF/s6OYIK7uLiYKclUqKYNigjgs06bJcH0hRySu76+7rRP5jk8g2f12ff/l0qRxTRpXIA0mawoTfMF8PJZjJYVXgDPmmDIYNDDViALIdHFkJLM6mc552YqlKtqq/FkTzDBQARqZnXJP8JSpTclqV/ZqYbGciTnllmS5OwU9+UZqv/TzyhJKLhKbPk3fWgu68Wlz118ZjmK7gII1TJNsCqzf+MywSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrA4wX8AfRTBIQvxo90AAAAASUVORK5CYII=" alt="Movie Playlist">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="playlist-info">
+                            <h4>Dessin</h4>
+                            <p>24 sons</p>
+                        </div>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Lecteur Audio -->
+    <div class="music-player" id="musicPlayer">
+        <div class="player-content">
+            <div class="track-info">
+                <div class="track-cover">
+                    <img id="currentTrackCover" src="" alt="Current track">
+                </div>
+                <div class="track-details">
+                    <h4 id="currentTrackTitle">Titre de la chanson</h4>
+                    <p id="currentTrackArtist">Artiste</p>
+                </div>
+                <button class="like-btn" id="likeBtn" title="J'aime">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="center-section">
+                <div class="player-controls">
+                    <button class="control-btn shuffle-btn" id="shuffleBtn" title="Aléatoire">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn" id="prevBtn" title="Précédent">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn play-pause-btn" id="playPauseBtn">
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn" id="nextBtn" title="Suivant">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn repeat-btn" id="repeatBtn" title="Répéter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="progress-section">
+                    <span class="time-display" id="currentTime">0:00</span>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-handle" id="progressHandle"></div>
+                    </div>
+                    <span class="time-display" id="totalTime">3:45</span>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <button class="control-btn playlist-btn" id="playlistBtn" title="File d'attente">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/>
+                    </svg>
+                </button>
+                <div class="volume-section">
+                    <button class="control-btn volume-icon" id="volumeBtn" title="Volume">
+                        <svg class="volume-high" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                        <svg class="volume-muted" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                        </svg>
+                    </button>
+                    <div class="volume-bar" id="volumeBar">
+                        <div class="volume-fill" id="volumeFill"></div>
+                        <div class="volume-handle" id="volumeHandle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Playlist Modal -->
+    <div class="playlist-modal" id="playlistModal">
+        <div class="playlist-modal-content">
+            <div class="playlist-modal-header">
+                <h3>File d'attente</h3>
+                <button class="close-modal" id="closeModal">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="playlist-modal-body" id="playlistModalBody">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
